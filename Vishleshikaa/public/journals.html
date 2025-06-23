@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vishleshikaa | Journal Volumes</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/journal.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Vishleshikaa</h1>
+            <p>Reflections, notes, and insights of ASI Kolkata Chapter. </p>
+        </div>
+    
+
+        <nav>
+            <div class="container">
+                <button class="menu-toggle" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="journals.html">Journals</a></li>
+                    <li><a href="aboutus.html">About the Book</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+     </header>
+
+
+<div class="section" id="activeSection">
+  <h2>Active Volume</h2>
+  <div id="activeVolumeContainer"></div>
+</div>
+
+<div class="section" id="archivedSection">
+  <h2>Archived Volumes</h2>
+  <div id="archivedVolumes"></div>
+</div>
+
+
+    <footer class="site-footer">
+    <div class="footer-wrapper">
+        <div class="footer-column left">
+        <h3>Conference Contacts</h3>
+        <ul>
+            <li><i class="fas fa-user-tie"></i> Prof Suparna Dhar</li>
+            <li><i class="fas fa-user-tie"></i> Prof Majid Mallik</li>
+            <li><i class="fas fa-user-tie"></i> Prof Sanjay Goswami</li>
+            <li><i class="fas fa-user-tie"></i> Prof Madhurima Paul</li>
+            <li><i class="fas fa-user-tie"></i> Prof Sangita Mazumdar</li>
+        </ul>
+        </div>
+
+        <div class="footer-column right">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="journals.html"><i class="fas fa-book-open"></i> Journals</a></li>
+            <li><a href="aboutus.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2024 Powered by <img src="your-logo.png" alt="Logo" class="footer-logo"></p>
+    </div>
+    </footer>
+
+
+
+<script>
+  // Your volume data — define volumes here
+  const volumes = [
+    {
+      volumeNumber: 0,
+      topics: [
+        { title: "Visleshikhaa is going to be launched", link: "launch.html" }
+      ]
+    },
+    {
+      volumeNumber: 1,
+      topics: [
+        { title: "Visleshikhaa 2025", link: "chapter.html" }
+      ]
+    }
+  ];
+
+  // Sort volumes so the highest (latest) is first
+  volumes.sort((a, b) => b.volumeNumber - a.volumeNumber);
+
+  const activeContainer = document.getElementById("activeVolumeContainer");
+  const archivedContainer = document.getElementById("archivedVolumes");
+
+  volumes.forEach((vol, index) => {
+    const volumeDiv = document.createElement("div");
+    volumeDiv.className = "volume";
+    if (index !== 0) volumeDiv.classList.add("archived-volume");
+
+    volumeDiv.innerHTML = `
+      <div class="vol-header">Volume ${vol.volumeNumber}</div>
+      <ul class="topic-list">
+        ${vol.topics.map(topic => `<li><a href="${topic.link}" target="_blank">${topic.title}</a></li>`).join('')}
+      </ul>
+    `;
+
+    if (index === 0) {
+      activeContainer.appendChild(volumeDiv);
+    } else {
+      archivedContainer.appendChild(volumeDiv);
+    }
+  });
+</script>
+
+
+</body>
+</html>

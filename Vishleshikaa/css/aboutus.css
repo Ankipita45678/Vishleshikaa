@@ -1,0 +1,148 @@
+.container {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+.logo {
+      max-width: 120px;
+      margin-bottom: 20px;
+    }
+
+h1 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+.info-block {
+      text-align: left;
+      margin-top: 30px;
+    }
+
+.info-block p {
+      margin: 5px 0;
+    }
+
+.bold {
+      font-weight: bold;
+    }
+
+.bottom-note {
+      margin-top: 30px;
+      text-align: justify;
+    }
+
+.editorial {
+      margin-top: 30px;
+      text-align: left;
+    }
+
+.editorial-title {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+@media (max-width: 600px) {
+body {
+        padding: 20px 15px;
+      }
+
+.logo {
+        max-width: 100px;
+      }
+.container {
+        padding: 0 10px;
+      }
+}
+
+
+
+
+
+
+
+.container1 {
+      max-width: 900px;
+      margin: auto;
+      margin-top: 30px;
+      color: black;
+      font-family:Georgia, 'Times New Roman', Times, serif
+}
+.section-title {
+      font-weight: bold;
+      font-size: 30px;
+      margin-bottom: 25px;
+      text-align: center;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.trustee-text {
+      text-align: justify;
+}
+
+.trustee-image-1 {
+      float: left;
+      /* width: 160px; */
+      margin-right: 20px;
+      margin-bottom: 10px;
+}
+
+.trustee-image-1 img {
+      /* width: 100%; */
+      border-radius: 4px;
+      height: 200px;
+      max-width: 200px;
+}
+
+.trustee-image {
+      float: left;
+      width: 160px;
+      margin-right: 20px;
+      margin-bottom: 10px;
+}
+
+.trustee-image img {
+      width: 100%;
+      border-radius: 4px;
+}
+.trustee-text ul {
+      padding-left: 50px;
+      margin-bottom: 20px;
+}
+
+.trustee-text li {
+      margin-bottom: 15px;
+      margin-top: 10px;
+}
+
+.signature {
+      margin-top: 25px;
+}
+
+.signature p {
+      margin: 3px 0;
+}
+
+@media (max-width: 600px) {
+      .trustee-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+.trustee-text {
+        text-align: justify;
+      }
+
+.trustee-image {
+        max-width: 120px;
+      }
+}
+
+
+.end-line {
+  border: none;
+  height: 2px;
+  background-color: #00000075; /* black line, you can change */
+  margin: 40px auto;
+  width: 60%; /* or use a specific width like 80% */
+}

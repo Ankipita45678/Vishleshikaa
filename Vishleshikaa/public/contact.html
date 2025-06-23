@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Vishleshikaa 2025</title>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet" href="../css/contact.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("0O1yJ--k8t6uWbLRd"); // Replace with your EmailJS public key
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1>Vishleshikaa</h1>
+      <p>Reflections, notes, and insights of ASI Kolkata Chapter.</p>
+    </div>
+
+    <nav>
+      <div class="container">
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="journals.html">Journals</a></li>
+          <li><a href="aboutus.html">About the Book</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Contact Title -->
+  <!-- <div class="container section-header">
+    <h1>Contact Us</h1>
+  </div> -->
+
+  <!-- Conference Contacts -->
+  <div class="container contact-section">
+    <h2>Conference Contacts</h2>
+    <div class="card-container">
+      <div class="contact-card">
+        <h3>Prof Suparna Dhar</h3>
+        <p>📧 suparna.dhar@nshm.com<br>📞 9830213143 / 9836206535</p>
+      </div>
+      <div class="contact-card">
+        <h3>Prof Majid Mallik</h3>
+        <p>📧 majid.mallik@nshm.com<br>📞 9830590697</p>
+      </div>
+      <div class="contact-card">
+        <h3>Prof Sanjay Goswami</h3>
+        <p>📧 sanjay.goswami@nshm.com<br>📞 8337034756</p>
+      </div>
+      <div class="contact-card">
+        <h3>Prof Madhurima Paul</h3>
+        <p>📧 madhurima.paul@nshm.com<br>📞 8697158972</p>
+      </div>
+      <div class="contact-card">
+        <h3>Prof Sangita Mazumdar</h3>
+        <p>📧 sangita.mazumdar@nshm.com<br>📞 9831067835</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ASI Kolkata Chapter Info -->
+    <div class="container chapter-info">
+        <h2>ASI Kolkata Chapter</h2>
+        <div class="info-map-wrapper">
+            <div class="chapter-details">
+            <p><strong>Address:</strong> NSHM Knowledge Campus,<br>124, 60 BL Saha Road, Tara Park, Behala, Kolkata, PIN - 700053</p>
+            <p><strong>Email:</strong> asi.kolchp@gmail.com</p>
+            </div>
+            <div class="chapter-map">
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.204175770088!2d88.33623647453905!3d22.49652143575591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0270be98d72241%3A0x37ed28352432b452!2sNSHM%20Knowledge%20Campus!5e0!3m2!1sen!2sin!4v1749930506416!5m2!1sen!2sin"
+            width="100%"
+            height="200"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            </div>
+        </div>
+    </div>
+
+
+  <!-- Contact Form -->
+  <div class="container form-section">
+    <h2>Send Us a Message</h2>
+    <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message..." rows="6" required></textarea>
+        <button type="submit">Send Message</button>
+        <p id="status-msg"></p>
+    </form>
+  </div>
+
+
+
+      <footer class="site-footer">
+    <div class="footer-wrapper">
+        <div class="footer-column left">
+        <h3>Conference Contacts</h3>
+        <ul>
+            <li><i class="fas fa-user-tie"></i> Prof Suparna Dhar</li>
+            <li><i class="fas fa-user-tie"></i> Prof Majid Mallik</li>
+            <li><i class="fas fa-user-tie"></i> Prof Sanjay Goswami</li>
+            <li><i class="fas fa-user-tie"></i> Prof Madhurima Paul</li>
+            <li><i class="fas fa-user-tie"></i> Prof Sangita Mazumdar</li>
+        </ul>
+        </div>
+
+        <div class="footer-column right">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="journals.html"><i class="fas fa-book-open"></i> Journals</a></li>
+            <li><a href="aboutus.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2024 Powered by <img src="your-logo.png" alt="Logo" class="footer-logo"></p>
+    </div>
+    </footer>
+
+
+    
+  <script src="contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,357 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: #010135;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Merriweather', serif;
+    font-size: clamp(1.8rem, 4vw, 2.5rem); /* Responsive font size */
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+/* Navigation - Responsive */
+nav {
+    background: #19166ca2;
+    color: white;
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    font-size: 1rem;
+}
+
+.nav-links li a.active, 
+.nav-links li a:hover {
+    background: #dbdbdb;
+    color: black;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+
+
+
+
+
+/* Main Content */
+/* === Book Intro Section === */
+.book-intro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    margin: 60px 0;
+    opacity: 0; /* Start hidden for fade-in animation */
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.book-details {
+    flex: 1;
+    min-width: 300px;
+}
+
+.book-cover {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    position: relative;
+}
+
+.book-img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.268);
+    transform: perspective(1000px) rotateY(0deg);
+    transition: all 0.5s ease;
+}
+
+.book-img:hover {
+    transform: perspective(1000px) rotateY(-10deg);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.book-title {
+    font-family: 'Merriweather', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #2c3e50;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.book-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #3498db;
+    margin: 10px 0 20px;
+}
+
+.book-author span {
+    font-weight: 600;
+    color: #3498db;
+}
+
+.book-meta {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+.book-description {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.btn {
+    display: inline-block;
+    background: #010135;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #044570;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(41, 128, 185, 0.3);
+}
+
+/* === Animations === */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .book-intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .book-title::after {
+        margin: 10px auto 20px;
+    }
+}
+
+.featured-journals {
+    margin-bottom: 40px;
+}
+
+.featured-journals h2 {
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.journal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.journal-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.journal-card:hover {
+    transform: translateY(-5px);
+}
+
+.journal-card h3 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.read-more {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+/* Media Queries for Mobile & Tablet */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #34495e;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .nav-links.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .nav-links li a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #2c3e50;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .journal-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 30px 0;
+    }
+
+    .intro {
+        padding: 30px 0;
+    }
+
+    .journal-card {
+        padding: 15px;
+    }
+}
+
+
+
+.site-footer {
+  background: linear-gradient(115deg, #020229, #0d6efd);
+  color: #f1f1f1;
+  font-family: 'Roboto', sans-serif;
+  padding: 40px 20px 20px;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 20px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 30px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-column h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+  border-left: 4px solid #0d6efd;
+  padding-left: 10px;
+  background-color: #044570;
+  border-radius: 5px
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: #f1f1f1;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #0d6efd;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 15px;
+  font-size: 0.95rem;
+  color: #bbb;
+}
+
+.footer-logo {
+  height: 60px;
+  width: 80px;
+  vertical-align: middle;
+  margin-left: 6px;
+}
