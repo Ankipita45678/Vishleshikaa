@@ -14,29 +14,36 @@
     })();
   </script>
 </head>
+
+
+
+
 <body>
 
   <!-- Header Section -->
-  <header>
-    <div class="container">
-      <h1>Vishleshikaa</h1>
-      <p>Reflections, Notes, and Insights of ASI Kolkata Chapter.</p>
+<header>
+    <div class="header-inner container">
+        <img src="https://asikol.nshm.com/AGC2025/img/vishleshikaa.jpg" alt="Logo" class="logo"> <!-- Logo image -->
+        <div class="title-block">
+            <h1>Vishleshikaa</h1>
+            <p>Reflections, notes, and insights of ASI Kolkata Chapter.</p>
+        </div>
     </div>
 
     <nav>
-      <div class="container">
-        <button class="menu-toggle" aria-label="Toggle navigation">
-          <i class="fas fa-bars"></i>
-        </button>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="journals.html">Journals</a></li>
-          <li><a href="aboutus.html">About the Book</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
+        <div class="container">
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="journals.html">Journals</a></li>
+                <li><a href="aboutus.html">About the Book</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
     </nav>
-  </header>
+</header>
 
   <!-- Contact Title -->
   <!-- <div class="container section-header">
@@ -110,7 +117,7 @@
       <footer class="site-footer">
     <div class="footer-wrapper">
         <div class="footer-column left">
-        <h3>Conference Contacts</h3>
+        <h3>Journal Contacts</h3>
         <ul>
             <li><i class="fas fa-user-tie"></i> Prof Suparna Dhar</li>
             <li><i class="fas fa-user-tie"></i> Prof Majid Mallik</li>
@@ -137,6 +144,11 @@
     </footer>
 
 
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
     
   <script src="contact.js"></script>
 </body>
