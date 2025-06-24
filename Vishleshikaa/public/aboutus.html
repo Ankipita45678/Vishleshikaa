@@ -12,31 +12,33 @@
 </head>
 <body>
 
-    <header>
-        <div class="container">
+<header>
+    <div class="header-inner container">
+        <img src="https://asikol.nshm.com/AGC2025/img/vishleshikaa.jpg" alt="Logo" class="logo"> <!-- Logo image -->
+        <div class="title-block">
             <h1>Vishleshikaa</h1>
-            <p>Reflections, Notes, and Insights of ASI Kolkata Chapter. </p>
+            <p>Reflections, notes, and insights of ASI Kolkata Chapter.</p>
         </div>
-    
+    </div>
 
-        <nav>
-            <div class="container">
-                <button class="menu-toggle" aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="journals.html">Journals</a></li>
-                    <li><a href="aboutus.html">About the Book</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <nav>
+        <div class="container">
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="journals.html">Journals</a></li>
+                <li><a href="aboutus.html">About the Book</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
 
 
-    <div class="container">
-        <img src="https://asikol.nshm.com/media/AGC2025.png" alt="Logo" class="logo" />
+    <div class="container_main">
+        <!-- <img src="https://asikol.nshm.com/media/AGC2025.png" alt="Logo" class="logo" /> -->
 
         <h1>
         Vishleshikaa is the annual journal of ASI Kolkata Chapter. The first edition of Vishleshikaa is being presented at Analytics Global Conference 2025 (AGC2024) held at Kolkata on the 8<sup>th</sup> and 9<sup>th</sup> of March 2025.
@@ -165,7 +167,7 @@
         As artificial intelligence is becoming a mainstay of our daily lives, the domain of data science, machine learning, deep learning, and their applications will gain increasing importance. Analytics, machine learning, and artificial intelligence will continue to change lives and lifestyles. There is an immense need for quality research and innovation in this field. Vishleshikaa is an effort to usher in an ecosystem of research and innovation for higher learning. 
      </p>
       <div class="signature">
-          
+
         <p><strong>Prof Suparna Dhar</strong></p>
         <p>Chief Convener AGC2025</p>
         <p>Principal, NSHM Institute of Computing & Analytics, </p>
@@ -179,7 +181,7 @@
       <footer class="site-footer">
     <div class="footer-wrapper">
         <div class="footer-column left">
-        <h3>Conference Contacts</h3>
+        <h3>Journal Contacts</h3>
         <ul>
             <li><i class="fas fa-user-tie"></i> Prof Suparna Dhar</li>
             <li><i class="fas fa-user-tie"></i> Prof Majid Mallik</li>
@@ -206,5 +208,12 @@
     </footer>
 
     
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+
 </body>
 </html>
