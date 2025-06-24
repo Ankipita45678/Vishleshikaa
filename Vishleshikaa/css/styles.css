@@ -43,20 +43,43 @@ header p {
     justify-content: center;
     gap: 20px;
     position: relative;
+    padding: 20px 10px;
 }
 
 .logo {
     position: absolute;
-    left: -120px;
-    height: 60px;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50px;
     width: auto;
-    top: -30px;
+    max-width: 20vw; /* makes it responsive */
+}
+
+@media (max-width: 768px) {
+    .logo {
+        height: 40px;
+        max-width: 25vw;
+        left: 5px;
+    }
+
+    .header-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        position: static;
+        transform: none;
+        margin-bottom: 10px;
+    }
 }
 
 .title-block {
     text-align: center;
     width: 100%;
 }
+
 
 /* Navigation - Responsive */
 nav {
