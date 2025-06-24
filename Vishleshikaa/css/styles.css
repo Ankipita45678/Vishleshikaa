@@ -24,16 +24,38 @@ header {
     color: white;
     padding: 40px 0;
     text-align: center;
+    height: 260px;
 }
 
 header h1 {
     font-family: 'Merriweather', serif;
     font-size: clamp(1.8rem, 4vw, 2.5rem); /* Responsive font size */
     margin-bottom: 10px;
-}
+} 
 
 header p {
     font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    left: -90px;
+    height: 60px;
+    width: auto;
+    margin-bottom: 70px;
+}
+
+.title-block {
+    text-align: center;
+    width: 100%;
 }
 
 /* Navigation - Responsive */
@@ -41,28 +63,35 @@ nav {
     background: #19166ca2;
     color: white;
     position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    justify-content: center;
-    transition: all 0.3s ease;
+    text-align: center;
+    margin-left: 290px;
+    gap: 30px; /* optional spacing between links */
 }
 
 .nav-links li a {
     color: white;
     text-decoration: none;
-    padding: 15px 20px;
-    display: block;
     font-size: 1rem;
+    padding: 10px 20px;
+    transition: background 0.3s ease;
 }
 
 .nav-links li a.active, 
 .nav-links li a:hover {
     background: #dbdbdb;
     color: black;
+    border-radius: 4px;
 }
+
 
 .menu-toggle {
     display: none;
@@ -73,6 +102,9 @@ nav {
     cursor: pointer;
     padding: 10px;
 }
+
+
+
 
 
 
