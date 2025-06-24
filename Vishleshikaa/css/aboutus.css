@@ -1,9 +1,12 @@
-.container {
+.container_main {
       max-width: 800px;
       margin: auto;
       text-align: center;
     }
 
+.container_main h1{
+      margin-top: 20px;
+}
 .logo {
       max-width: 120px;
       margin-bottom: 20px;
