@@ -38,41 +38,52 @@ header p {
 }
 
 .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 10px 20px;
     position: relative;
-    text-align: center;
-    padding: 20px 10px;
 }
 
 .logo {
     position: absolute;
-    top: -30px;
-    left: -120px;
+    top: 0;
+    left: 0;
+    transform: translate(-60%, -50%);
     height: 50px;
     width: auto;
-    max-width: 20vw;
+    max-width: 100px;
+}
+
+
+.title-block {
+    text-align: center;
+    width: 100%;
 }
 
 @media (max-width: 768px) {
-    .logo {
+  .logo {
         position: static;
+        transform: none;
         display: block;
         margin: 0 auto 10px auto;
         height: 40px;
-        max-width: 40vw;
+        max-width: 80px;
     }
 
     .header-inner {
+        padding-top: 20px;
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 }
 
-.title-block {
-    max-width: 100%;
-    margin: 0 auto;
-    padding-top: 10px;
-}
+
+
+
+
 
 /* Navigation - Responsive */
 nav {
